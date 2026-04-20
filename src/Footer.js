@@ -7,13 +7,14 @@ function Footer() {
       <p>© 2026 Hilawit. All Rights Reserved.</p>
 
       <div className="footer-links">
-        <a href="https://github.com/yourname" target="_blank" rel="noreferrer">
+        <a href="https://github.com/hilawitahailu-wq" target="_blank" rel="noreferrer">
           GitHub
         </a>
-        <a href="https://linkedin.com/in/yourname" target="_blank" rel="noreferrer">
+        <a href="
+       https://www.linkedin.com/in/hilawit-assefa" target="_blank" rel="noreferrer">
           LinkedIn
         </a>
-        <a href="mailto:yourname@gmail.com">
+        <a href="mailto:https://hilawit.ahailu@gmail.com">
           Email
         </a>
       </div>

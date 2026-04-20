@@ -19,7 +19,7 @@ function Aboutgym() {
             customized workout plans to help you stay strong, confident, and
             healthy.
           </p>
-          <button className="about-btn">Learn More</button>
+    
         </div>
 
         {/* Right Content */}
@@ -35,7 +35,3 @@ function Aboutgym() {
 }
 
 export default Aboutgym;
-
-
-import {themecontext } from React;
-export const themecontext =creatcontext();

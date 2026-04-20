@@ -1,37 +1,39 @@
-* {
+/* RESET */
+html, body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: "Segoe UI", sans-serif;
-
-  overflow-x: hidden; /* prevent horizontal scroll too */
+  overflow-x: hidden;
 }
 
-
-
+/* MAIN CONTAINER */
 .gym-container {
   background-color: #0b0f19;
   color: white;
+  min-height: 100vh;
+  overflow-x: hidden;
 }
 
-/* Hero Section */
+/* HERO SECTION */
 .hero {
-
-    min-height: 100vh;
+  min-height: 100vh;
   background: linear-gradient(
       rgba(0, 0, 0, 0.6),
       rgba(0, 0, 0, 0.6)
     ),
     url("https://images.unsplash.com/photo-1554284126-aa88f22d8b74");
+
   background-size: cover;
   background-position: center;
+
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
-    padding-bottom: 0;
-}
 
+  padding: 20px;
+}
 
 .hero-content h1 {
   font-size: 60px;
@@ -58,16 +60,23 @@
   background-color: #e60000;
 }
 
-/* Features */
+/* FEATURES */
 .features {
   display: flex;
-  justify-content: space-around;
-  padding: 60px 40px;
+  justify-content: center;
+  align-items: stretch;
+  gap: 20px;
+
+  padding: 60px 20px;
   background-color: #111827;
+
+  flex-wrap: wrap; /* FIX for spacing issues */
 }
 
 .feature-card {
-  width: 30%;
+  flex: 1;
+  min-width: 250px;
+
   background-color: #1f2933;
   padding: 30px;
   border-radius: 12px;
@@ -79,11 +88,13 @@
   color: #ff2c2c;
 }
 
-/* CTA */
+/* CTA SECTION */
 .cta {
   padding: 70px 20px;
   text-align: center;
   background-color: #0b0f19;
+
+  margin-bottom: 0; /* FIX blank space */
 }
 
 .cta h2 {

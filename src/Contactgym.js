@@ -10,6 +10,7 @@ function Contactgym({ focusField }) {
 
   const [errors, setErrors] = useState({});
   const [success, setSuccess] = useState("");
+  const [loading, setLoading] = useState(false);
 
   // Ref for name input
   const nameRef = useRef(null);
@@ -49,15 +50,37 @@ function Contactgym({ focusField }) {
   };
 
   // Handle form submit
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     const validationErrors = validate();
 
     if (Object.keys(validationErrors).length === 0) {
-      setSuccess("Your message has been sent!");
-      setErrors({});
-      setFormData({ name: "", email: "", message: "" });
-      // Send formData to backend/API here if needed
+      setLoading(true);
+      try {
+        const response = await fetch("http://localhost:5000/contact", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(formData),
+        });
+
+        const result = await response.json();
+
+        if (response.ok) {
+          setSuccess("Your message has been sent!");
+          setErrors({});
+          setFormData({ name: "", email: "", message: "" });
+        } else {
+          setErrors({ submit: result.error || "Failed to send message" });
+          setSuccess("");
+        }
+      } catch (error) {
+        setErrors({ submit: "Network error. Please try again." });
+        setSuccess("");
+      } finally {
+        setLoading(false);
+      }
     } else {
       setErrors(validationErrors);
       setSuccess("");
@@ -79,14 +102,14 @@ function Contactgym({ focusField }) {
             <strong>📍 Address:</strong> Addis Ababa, Ethiopia
           </p>
           <p>
-            <strong>📞 Phone:</strong> +251 9XX XXX XXX
+            <strong>📞 Phone:</strong> +251 982622917
           </p>
           <p>
-            <strong>📧 Email:</strong> gympro@email.com
+            <strong>📧 Email:</strong> hilawit.ahailu@gmail.com
           </p>
           <p>
             <strong>⏰ Working Hours:</strong><br />
-            Mon – Sat: 6:00 AM – 10:00 PM
+            Mon – Sat: 11:00AM – 3:00 PM
           </p>
         </div>
 
@@ -120,9 +143,12 @@ function Contactgym({ focusField }) {
             ></textarea>
             {errors.message && <span className="error">{errors.message}</span>}
 
-            <button type="submit">Send Message</button>
+            <button type="submit" disabled={loading}>
+              {loading ? "Sending..." : "Send Message"}
+            </button>
 
             {success && <p className="success">{success}</p>}
+            {errors.submit && <p className="error">{errors.submit}</p>}
           </form>
         </div>
       </div>

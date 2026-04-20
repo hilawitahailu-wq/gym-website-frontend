@@ -437,35 +437,43 @@ render(){
   );
 }
 export default counter;*/
-/*import React from "react";
+
+import React from "react";
 import Homegym from "./Homegym";
-import Navgym from "./Navgym";
 import Aboutgym from "./Aboutgym";
 import Gallarygym from "./Gallarygym";
 import Contactgym from "./Contactgym";
-
+import Navgym from "./Navgym";
 
 function App() {
   return (
     <div>
-      <Homegym />
-    <Aboutgym />
-     <Gallarygym />
-       <Contactgym />
-          
-        <Navgym />
-            <section id="home" style={{ height: "100vh" }}></section>
-      <section id="about" style={{ height: "100vh" }}></section>
-      <section id="gallery" style={{ height: "100vh" }}></section>
-      <section id="blog" style={{ height: "100vh" }}></section>
-      <section id="contact" style={{ height: "100vh" }}></section>
-        </div>
+      {/* Navigation */}
+      <Navgym />
+
+      {/* Sections (ONLY real components, no empty sections) */}
+      <section id="home">
+        <Homegym />
+      </section>
+
+      <section id="about">
+        <Aboutgym />
+      </section>
+
+      <section id="gallery">
+        <Gallarygym />
+      </section>
+
+      <section id="contact">
+        <Contactgym />
+      </section>
+    </div>
   );
-    
 }
+
 export default App;
 
-import React from "react";
+/*import React from "react";
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 
 function Home() {
@@ -491,7 +499,7 @@ function App() {
 }
 
 export default App;*/
-import React from "react";
+/*import React from "react";
 import Navbar from "./Navbar";
 import Home from "./Home";
 import About from "./About";
@@ -518,4 +526,4 @@ function App() {
   );
 }
 
-export default App;
+export default App;*/

@@ -121,14 +121,14 @@ function Contact() {
         {/* Contact Info */}
         <div className="contact-info">
           <h3>Get in Touch</h3>
-          <p><strong>Email:</strong> hilawit@example.com</p>
+          <p><strong>Email:</strong> hilawit.ahailu@gmail.com</p>
           <p><strong>Phone:</strong> +251 82622917</p>
           <p><strong>Location:</strong> Addis Ababa, Ethiopia</p>
 
           <p>
             <strong>Social:</strong><br />
-            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">LinkedIn</a><br />
-            <a href="https://github.com" target="_blank" rel="noopener noreferrer">GitHub</a>
+            <a href="https://www.linkedin.com/in/hilawit-assefa" target="_blank" rel="noopener noreferrer">LinkedIn</a><br />
+            <a href="https://github.com/hilawitahailu-wq" target="_blank" rel="noopener noreferrer">GitHub</a>
           </p>
         </div>
 
