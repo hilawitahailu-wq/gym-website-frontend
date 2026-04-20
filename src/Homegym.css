@@ -1,0 +1,108 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+
+  overflow-x: hidden; /* prevent horizontal scroll too */
+}
+
+
+
+.gym-container {
+  background-color: #0b0f19;
+  color: white;
+}
+
+/* Hero Section */
+.hero {
+
+    min-height: 100vh;
+  background: linear-gradient(
+      rgba(0, 0, 0, 0.6),
+      rgba(0, 0, 0, 0.6)
+    ),
+    url("https://images.unsplash.com/photo-1554284126-aa88f22d8b74");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+    padding-bottom: 0;
+}
+
+
+.hero-content h1 {
+  font-size: 60px;
+  margin-bottom: 15px;
+}
+
+.hero-content p {
+  font-size: 20px;
+  margin-bottom: 25px;
+}
+
+.hero-btn {
+  padding: 12px 30px;
+  background-color: #ff2c2c;
+  border: none;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 30px;
+  transition: 0.3s;
+}
+
+.hero-btn:hover {
+  background-color: #e60000;
+}
+
+/* Features */
+.features {
+  display: flex;
+  justify-content: space-around;
+  padding: 60px 40px;
+  background-color: #111827;
+}
+
+.feature-card {
+  width: 30%;
+  background-color: #1f2933;
+  padding: 30px;
+  border-radius: 12px;
+  text-align: center;
+}
+
+.feature-card h3 {
+  margin-bottom: 15px;
+  color: #ff2c2c;
+}
+
+/* CTA */
+.cta {
+  padding: 70px 20px;
+  text-align: center;
+  background-color: #0b0f19;
+}
+
+.cta h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.cta-btn {
+  padding: 12px 35px;
+  background-color: transparent;
+  border: 2px solid #ff2c2c;
+  color: #ff2c2c;
+  font-size: 16px;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.cta-btn:hover {
+  background-color: #ff2c2c;
+  color: white;
+}
